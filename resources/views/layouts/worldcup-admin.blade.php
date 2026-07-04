@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'مدیریت جام جهانی رشت‌گلد')</title>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('worldcup/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/worldcup/style.css') }}">
     <style>
         .admin-wrap{max-width:1100px;margin:0 auto;padding:24px 16px 50px}
         .admin-nav{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 24px}

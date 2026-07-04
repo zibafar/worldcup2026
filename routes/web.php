@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminWorldCupController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\WorldCupController;
 use Illuminate\Support\Facades\Route;
 
@@ -36,3 +37,16 @@ Route::prefix('admin/worldcup')
         Route::get('/faqs', [AdminWorldCupController::class, 'faqs'])->name('faqs');
         Route::post('/faqs', [AdminWorldCupController::class, 'storeFaq'])->name('faqs.store');
     });
+
+
+Route::get('/login', [AuthController::class, 'showLogin'])
+    ->middleware('guest')
+    ->name('login');
+
+Route::post('/login', [AuthController::class, 'login'])
+    ->middleware('guest')
+    ->name('login.submit');
+
+Route::post('/logout', [AuthController::class, 'logout'])
+    ->middleware('auth')
+    ->name('logout');
